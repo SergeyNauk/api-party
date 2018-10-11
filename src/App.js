@@ -62,12 +62,12 @@ class App extends Component {
 			<Provider store={ store }>
 				<Router history={ history }>
 					<Switch>
-						<Route path="/" component={ Home } />
+						<Route path="/home" component={ Home } />
 						<Route path="/film-info" component={ FilmInfo } />
 						<Route path="/posts" component={ Posts } />
 						<Route path="/post-detail/:id" component={ PostDetail } />
 						<Route path="/weather" component={ Weather } />
-						<Redirect to="/" />
+						<Redirect to="/home" />
 					</Switch>
 				</Router>
 			</Provider>
