@@ -10,6 +10,7 @@ export default {
 
 	more_info:
 		'About the app: if you go to "favorite movie" - you can find basic information about the picture you are interested in.' +
+		'To authorize, used the Google Firebase API. ' +
 		'When you go to the" list of posts " you get a list of posts by clicking on any of them, you will receive comments on this post.' +
 		'In addition, you can simply type in the query line /post-detail/{post number} and get the info directly about this post.' +
 		'Feature of the application is the "weather in your city", when you click on the tab - request for a special service' +
@@ -23,8 +24,9 @@ export default {
 	favorite_film: 'Your favorite film info',
 	post_list: 'Get posts list',
 	weather_in_your_city: 'Weather in your city',
-	//button
-	home: 'home',
+	//buttons
+	home: 'Home',
+	sign_out: 'Sign out',
 	//weather
 	city_name: 'Your city is',
 	temp_now: 'temperature now:',
