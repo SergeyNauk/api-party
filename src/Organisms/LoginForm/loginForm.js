@@ -23,10 +23,10 @@ class LoginForm extends Component {
 
     signup = (e) => {
         e.preventDefault();
-        fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-        }).then((u)=>{console.log(u)})
+        fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
+        .then((u)=>{})
+        .then((u)=>{console.log(u)})
         .catch((error) => {
-            console.log(error.message, 'cons1');
             toast.error(error.message);
           });
       }
@@ -37,7 +37,6 @@ class LoginForm extends Component {
         .then((u)=>{})
         .then((u)=>{console.log(u)})
         .catch((error)=> {
-            console.log(error.message, 'cons2');
             toast.error(error.message);
         });
     }
@@ -65,7 +64,7 @@ class LoginForm extends Component {
                                 placeholder = " Email"
                                 validations={[requiredEmail, email]}
                                 ref = {(element) => { this.inputContainer = element } }
-                                />
+                            />
                             <Input 
                                 className= { css(styles.inputStyles) }
                                 value={this.state.password} 
@@ -74,20 +73,17 @@ class LoginForm extends Component {
                                 name="password"
                                 placeholder=" Password"
                                 validations={[requiredPass, passLength]}
-                                />
-                                
+                            />    
                         </div>
                         <div className = { css(styles.LoginFormButtonsWrapper) }>
                             <Button
                                 className = { css(styles.buttonStyles) } 
-                               // type="submit"
                                 onClick={this.login}
                             >
                                 Login
                             </Button>
                             <Button
                                 className = { css(styles.buttonStyles) }
-                              //  type="submit"
                                 onClick={this.signup}
                             >
                                 Signup
