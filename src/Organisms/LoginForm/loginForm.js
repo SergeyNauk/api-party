@@ -61,7 +61,7 @@ class LoginForm extends Component {
                                 value = { this.state.email } 
                                 onChange = { this.handleChange }
                                 name = "email"
-                                placeholder = " Email"
+                                placeholder = "Input email"
                                 validations={[requiredEmail, email]}
                                 ref = {(element) => { this.inputContainer = element } }
                             />
@@ -71,7 +71,7 @@ class LoginForm extends Component {
                                 onChange={this.handleChange}
                                 type="password"
                                 name="password"
-                                placeholder=" Password"
+                                placeholder=" Password minimum 8 symbols"
                                 validations={[requiredPass, passLength]}
                             />    
                         </div>
