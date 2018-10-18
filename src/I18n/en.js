@@ -9,12 +9,12 @@ export default {
 		'the BABEL transponder is used. And to output the errore of message, used react-toastify.',
 
 	more_info:
-		'About the app: if you go to "favorite movie" - you can find basic information about the picture you are interested in.' +
-		'To authorize, used the Google Firebase API. ' +
-		'When you go to the" list of posts " you get a list of posts by clicking on any of them, you will receive comments on this post.' +
-		'In addition, you can simply type in the query line /post-detail/{post number} and get the info directly about this post.' +
-		'Feature of the application is the "weather in your city", when you click on the tab - request for a special service' +
-		'automatically determines your city, then request to another server, receive weather information directly in your city.',
+		'About the app: when you click on the "list of posts", system dynamic pagination,  determines how many posts will fit, depending on the '+
+		'width of the browser window and renders only the required number of posts. By clicking on any of them, you will receive comments to this '+
+		'post. In addition, you can simply type in the query line /post-detail/{post number} and get the info directly about this post. If you go '+
+		'to" favorite movie " - you can find basic information about the picture you are interested in. Feature application "weather in your city", '+
+		'when you click on the tab, the special service automatically determines your city, then request to another server, receive weather '+
+		'information directly in your city.',
 	simulation:
 		'To simulate slow connection with the server try debugger mode slow 3G, and self-correction of errors when connecting'+ 
 		'- just change the constants in constantsAPI.js .',
