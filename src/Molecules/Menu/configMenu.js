@@ -26,7 +26,7 @@ export const menuStyles = {
 		overflow: 'hidden',
 	},
 	bmMorphShape: {
-		fill: color.thirdColor,
+		fill: 'white',
 	},
 	bmItemList: {
 		color: '#b8b7ad',
@@ -41,7 +41,7 @@ export const menuStyles = {
 	bmItem: {
 		display: 'inline-block',
 		textDecoration: 'none',
-		color: color.mainColor,
+		color: 'white',
 		fontWeight: 'bold',
 		fontSize: '18px',
 		marginTop: '10px',

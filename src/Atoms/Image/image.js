@@ -9,7 +9,7 @@ const Image = ({ src }) => (
 );
 
 Image.propTypes = {
-	src: PropTypes.string.isRequired,
+	src: PropTypes.string,
 };
 
 export default Image;

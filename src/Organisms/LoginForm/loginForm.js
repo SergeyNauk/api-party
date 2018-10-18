@@ -11,6 +11,8 @@ import { requiredPass, requiredEmail, email, passLength } from './validation';
 import fire from '../../Firebase/authConfig';
 import { ToastContainer, toast } from 'react-toastify';
 
+import history from './../../history'; 
+
 class LoginForm extends Component {
     constructor(props) {
         super(props);
@@ -25,7 +27,7 @@ class LoginForm extends Component {
         e.preventDefault();
         fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
         .then((u)=>{})
-        .then((u)=>{console.log(u)})
+        .then((u)=>{ history.push('/') })
         .catch((error) => {
             toast.error(error.message);
           });
@@ -35,7 +37,7 @@ class LoginForm extends Component {
         e.preventDefault();
         fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
         .then((u)=>{})
-        .then((u)=>{console.log(u)})
+        .then((u)=>{history.push('/') })
         .catch((error)=> {
             toast.error(error.message);
         });

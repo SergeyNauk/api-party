@@ -91,7 +91,6 @@ const withPropTypes = setPropTypes({
 	language: PropTypes.string.isRequired,
 	filmInfoLoading: PropTypes.bool.isRequired,
 	getFilmInfoStart: PropTypes.func.isRequired,
-	filmInfo: PropTypes.object.isRequired,
 });
 
 const composeHoc = compose(

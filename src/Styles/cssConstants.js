@@ -1,8 +1,9 @@
 export const color = {
-	mainColor:   	'#ffb53d',
-	secondColor: 	'#ff3dd2',
-	thirdColor:  	'#3dff98',
-	loginFormColor: '#4682B4',
+	mainColor:   	     '#87CEFA', 
+	secondColor: 	     '#4169E1',
+	thirdColor:  	     '#87CEFA',
+	loginFormColor:      '#4682B4',
+	backgroundPostColor: '#B0E0E6',
 };
 
 export const mediaQuery = {

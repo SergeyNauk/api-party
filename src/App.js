@@ -1,26 +1,18 @@
 import '@babel/polyfill';
 
 import React, { Component } from 'react';
-import { Router, Route, Switch, Redirect } from 'react-router-dom';
 import fire from './Firebase/authConfig';
-
-import history from './history';
 
 import './App.css';
 
+import { LoginForm } from './Organisms/LoginForm';
+import RouteConfig from './Route/routeConfig';
+
 import { configureStore } from './../src/Store';
 import { sagaMiddleware } from './../src/Store';
-
 import rootSaga from './../src/Sagas/rootSagas';
 
-import { Provider } from 'react-redux';
-
-import { LoginForm } from './Organisms/LoginForm';
-import { Home } from './../src/Pages/Home';
-import { FilmInfo } from './../src/Pages/FilmInfo';
-import { Posts } from './../src/Pages/Posts';
-import { PostDetail } from './../src/Pages/PostDetail';
-import { Weather } from './../src/Pages/Weather';
+import history from './../src/history';
 
 const store = configureStore();
 sagaMiddleware.run(rootSaga);
@@ -53,25 +45,22 @@ class App extends Component {
 	}
 	
 	render() {
-		console.log(this.state.user === null)
-		if (this.state.user === {} || this.state.user === null) {
-			return <LoginForm />
-		}
-		
+		const { user } = this.state;
 		return (
-			<Provider store={ store }>
-				<Router history={ history }>
-					<Switch>
-						<Route path="/home" component={ Home } />
-						<Route path="/film-info" component={ FilmInfo } />
-						<Route path="/posts" component={ Posts } />
-						<Route path="/post-detail/:id" component={ PostDetail } />
-						<Route path="/weather" component={ Weather } />
-						<Redirect to="/home" />
-					</Switch>
-				</Router>
-			</Provider>
-		);
+			<div className='App'>
+				{	user === null 
+					? ( 
+						<LoginForm />
+						)
+					: ( 
+						<RouteConfig
+							store = { store }
+							history = { history }
+						/> 
+					 )
+				}
+			</div>
+		)
 	}
 }
 

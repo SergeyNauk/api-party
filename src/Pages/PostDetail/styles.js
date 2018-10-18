@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
 	},
 	postDetailContainer: {
 		width: 'calc(100% - 50px)',
-		padding: '25px',
+		padding: '5px 25px 25px 25px',
 		display: 'flex',
 		flexWrap: 'wrap',
 		justifyContent: 'space-around',

@@ -6,7 +6,7 @@ import { styles } from './styles';
 
 const PostCard = ({ post }) => (
 	<div className={ css(styles.postCardWrapper) }>
-		<span className={ css(styles.postTitle) }>{ post.title }</span>
+		<span className={ css(styles.postTitle) }> {post.id} { post.title }</span>
 		<span className={css(styles.postBody)}>{ post.body }</span>
 	</div>
 );

@@ -10,7 +10,6 @@ export const getWeather = city => {
 	if (city !== undefined && city !== '') {
 		return fetch(`${urlAPI.weatherAPI}${city}${urlAPI.weatherServiceKey}`)
 			.then(res => {
-				console.log(res.status === 200, '--weather api--');
 				if (res.status === 200) {
 					return res.json();
 				} else {

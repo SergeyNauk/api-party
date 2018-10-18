@@ -114,12 +114,12 @@ const withPropTypes = setPropTypes({
 	language: PropTypes.string.isRequired,
 	weatherLoading: PropTypes.bool.isRequired,
 	weather: PropTypes.shape({
-		weatherImg: PropTypes.string.isRequired,
-		temp: PropTypes.string.isRequired,
-		tempMax: PropTypes.number.isRequired,
-		tempMin: PropTypes.number.isRequired,
-		windSpeed: PropTypes.number.isRequired,
-		pressure: PropTypes.number.isRequired,
+		weatherImg: PropTypes.string,
+		temp: PropTypes.string,
+		tempMax: PropTypes.number,
+		tempMin: PropTypes.number,
+		windSpeed: PropTypes.number,
+		pressure: PropTypes.number,
 	}).isRequired,
 });
 
